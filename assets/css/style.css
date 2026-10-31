@@ -108,7 +108,7 @@ h1 {
   font: 700 clamp(1.7rem, 5vw, 2.15rem)/1.2 var(--serif);
 }
 
-.registration {
+.crp {
   margin-bottom: 0;
   color: var(--muted);
   font-size: 0.84rem;
@@ -341,4 +341,13 @@ h1 {
   .profile-photo-wrap { width: 108px; height: 108px; }
   .action { font-size: 0.82rem; }
   .online-note { padding: 16px; }
+}
+
+/* Remove link automático do Safari/iOS no CRP */
+.crp, .crp *, a[href^="tel"] {
+  color: inherit !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  pointer-events: none !important;
+  cursor: default !important;
 }
